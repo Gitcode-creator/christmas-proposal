@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to top, #0b0c2a, #1a1a4f);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  transition: opacity 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Snow Animation */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.ibb.co/7yGm1Ww/snowflake.png');
+  background-size: 20px 20px;
+  pointer-events: none;
+  animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+  0% {background-position: 0 0;}
+  100% {background-position: 0 1000px;}
+}
+
+/* Landing Page */
+#landing h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px #fff;
+}
+
+/* Tree and lights */
+.tree-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tree {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.5);
+}
+
+/* Lights */
+.lights .light {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+.lights .light:nth-child(1){ top: 50px; left: 110px; animation-delay: 0s;}
+.lights .light:nth-child(2){ top: 100px; left: 60px; animation-delay: 0.3s;}
+.lights .light:nth-child(3){ top: 120px; left: 160px; animation-delay: 0.6s;}
+.lights .light:nth-child(4){ top: 170px; left: 90px; animation-delay: 0.9s;}
+.lights .light:nth-child(5){ top: 200px; left: 140px; animation-delay: 1.2s;}
+.lights .light:nth-child(6){ top: 230px; left: 100px; animation-delay: 1.5s;}
+
+@keyframes blink {
+  0%, 50%, 100% {opacity: 1;}
+  25%, 75% {opacity: 0.3;}
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  font-size: 1.2em;
+  margin: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff3c3c;
+}
+
+#continueBtn {
+  background-color: #ff3c3c;
+  color: #fff;
+}
+
+.option {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.option#noBtn {
+  background-color: #dc3545;
+}
+
+/* Proposal Section */
+#proposal h2 { margin-bottom: 10px; font-size: 2em; }
+#proposal p { font-size: 1.5em; margin-bottom: 20px; }
+
+/* Greeting Section */
+#greeting h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff6f91;
+}
+
+.quotes p {
+  font-size: 1.5em;
+  margin: 10px 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Hearts Animation */
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff6f91;
+  transform: rotate(-45deg);
+  animation: floatUp 5s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff6f91;
+  border-radius: 50%;
+}
+
+.heart::before { top: -15px; left: 0; }
+.heart::after { left: 15px; top: 0; }
+
+@keyframes floatUp {
+  0% {transform: translateY(0) rotate(-45deg); opacity: 1;}
+  100% {transform: translateY(-800px) rotate(-45deg); opacity: 0;}
+}
