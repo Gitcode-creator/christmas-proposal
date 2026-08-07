@@ -1,56 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Proposal</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-</head>
-<body>
-  <!-- Snowfall -->
-  <div class="snow"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%2232%22 height=%2232%22><text y=%2226%22 font-size=%2226%22>🎄</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>AI Christmas Wishes Generator | WishMagic AI</title>
+    <meta name="description" content="Generate deeply personalized Christmas wishes, WhatsApp statuses, Instagram captions, and beautiful downloadable greeting cards with our intelligent AI tool. Custom templates, multiple languages, and festive chimes included." />
+    <meta name="keywords" content="Christmas, wishes generator, AI Christmas wishes, personalized greetings, greeting card generator, holiday cards, Christmas status updates" />
+    <meta name="author" content="WishMagic AI" />
 
-  <!-- Landing Page -->
-  <div class="section" id="landing">
-    <h1>Merry Christmas Bangaram 💖🎄</h1>
-    <div class="tree-container">
-        
-      <div class="lights">
-        <span class="light"></span>
-        <span class="light"></span>
-        <span class="light"></span>
-        <span class="light"></span>
-        <span class="light"></span>
-        <span class="light"></span>
-      </div>
-    </div>
-    <button id="continueBtn">Continue</button>
-  </div>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI Christmas Wishes Generator | WishMagic AI" />
+    <meta property="og:description" content="Create personalized Christmas greetings and beautiful downloadable graphics cards for your loved ones instantly with AI." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=1200" />
+    <meta property="og:url" content="https://wishmagic-ai.example.com" />
 
-  <!-- Proposal Section -->
-  <div class="section hidden" id="proposal">
-    <h2>I love you Nanna 💖</h2>
-    <p>Will you be my Sunshine ? ✨</p>
-    <div class="buttons">
-      <button class="option" id="yesBtn">Yes</button>
-      <button class="option" id="noBtn">No</button>
-    </div>
-  </div>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Christmas Wishes Generator | WishMagic AI" />
+    <meta name="twitter:description" content="Create personalized Christmas greetings and beautiful downloadable graphics cards for your loved ones instantly with AI." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=1200" />
 
-  <!-- Greeting Section -->
-  <div class="section hidden" id="greeting">
-    <h1>💖 You said Yes! 💖</h1>
-    <div class="quotes">
-      <p>"All I wanted for Christmas was you, and now eternity is our gift."</p>
-      <p>"Making spirits bright… with a ring this Christmas 💫💍!"</p>
-      <p>"You are my sunshine every Christmas!"</p>
-      <p>"Love makes every snowflake brighter!"</p>
-      <p>"Together, forever, every Christmas!"</p>
-    </div>
-    <div class="hearts"></div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <!-- Structured JSON-LD Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "WishMagic AI Christmas Wishes Generator",
+        "description": "An AI-powered generator for Christmas wishes, quotes, statuses, and custom cards.",
+        "applicationCategory": "EntertainmentApplication, UtilityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5."
+      }
+    </script>
+  </head>
+  <body class="bg-gradient-to-tr from-[#fbfcfe] to-[#f4f7fa] dark:from-[#090b1e] dark:to-[#0f172a] text-slate-800 dark:text-slate-200 min-h-screen transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
